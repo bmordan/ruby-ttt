@@ -24,16 +24,6 @@ def move(index, board)
   nextBoard
 end
 
-def play(board)
-  input = gets.strip
-  if valid?(input, board)
-    move(input, board)
-  else
-    puts "invalid move, try again"
-    play(board)
-  end
-end
-
 def board_to_string(board)
   board
     .map { |i| i.is_a?(Integer) ? "-" : i }
